@@ -1,0 +1,45 @@
+{
+  "name": "syllabus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered on-demand learning platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camclarke11/Syllabus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camclarke11/Syllabus/issues"
+  },
+  "homepage": "https://github.com/camclarke11/Syllabus#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.35.0",
+    "lucide-react": "^0.577.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.3.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  }
+}

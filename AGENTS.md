@@ -1,16 +1,35 @@
 ## Cursor Cloud specific instructions
 
-This repository ("Syllabus") is a minimal/skeleton Python project in its earliest stages.
+This repository ("Syllabus") is now a Next.js + TypeScript MVP for an AI-powered learning platform.
 
 ### Codebase overview
-- **Language:** Python 3 (only file: `Test.py`, which contains a single comment)
-- **Dependencies:** None — no `requirements.txt`, `pyproject.toml`, or package manager config
-- **Services:** None — no web server, database, or external service dependencies
-- **Tests/Lint:** No test framework or linter configured yet
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript + React
+- **Styling:** Tailwind CSS 4 + custom CSS variables
+- **Animation:** Framer Motion
+- **AI integration:** Anthropic SDK with mock fallback if API key is unavailable
+- **Persistence (MVP):**
+  - Server-side in-memory store (`lib/store.ts`) for courses/content/progress
+  - Client-side localStorage for anonymous progress state (`lib/local-progress.ts`)
 
-### Running the code
-- `python3 Test.py` — executes the only Python file (currently a no-op comment)
+### Running the app
+- `npm install`
+- `npm run dev`
+- `npm run lint`
+- `npm run build`
 
-### Notes for future agents
-- As the project grows, expect `requirements.txt` or `pyproject.toml` to be added. Check for these and install dependencies accordingly.
-- No build step, lint, or test commands exist yet. When they are added, update this file.
+### Key routes
+- `/` — landing + topic generation
+- `/course/[courseId]` — course overview
+- `/course/[courseId]/[chapterOrder]/[subsectionOrder]` — lesson view
+- `/dashboard` — user course list
+
+### API routes (MVP)
+- `POST /api/courses/generate`
+- `GET /api/courses/:id`
+- `DELETE /api/courses/:id`
+- `POST /api/courses/:id/content`
+- `GET /api/courses/:id/content/:subsectionId`
+- `PATCH /api/progress`
+- `GET /api/progress/:courseId`
+- `GET /api/user/courses`
